@@ -3,7 +3,7 @@ def max_temp_diff(filename):
 
     max_temp_diff = {}
 
-    with open(filename, 'r') as f:
+    with open(filename) as f:
         lines = f.readlines()
         for line in lines[1:]:
             tokens = line.split(",")
@@ -49,4 +49,4 @@ if __name__ == '__main__':
     
     # 2번 5월부터 9월까지의 적산온도
     for year, temp in sorted(accumulated_temperatures.items()):
-        print(f"{year}년의 5월부터 9월까지의 적산온도는 {temp:.1f}입니다.")
+        print(f"{year}년의 5월부터 9월까지의 적산온도는 {temp:.1f}°C 입니다.")

@@ -1,4 +1,3 @@
-
 def max_temp_diff(filename):
 
     max_temp_diff = {}
@@ -18,7 +17,7 @@ def max_temp_diff(filename):
     return max_temp_diff
 
 
-def cal_temperature(filename):
+def cal_temps(filename):
     cal_temp = {}  
 
     with open(filename) as f:
@@ -37,16 +36,20 @@ def cal_temperature(filename):
 
     return cal_temp
 
-if __name__ == '__main__':
+
+def main():
     weather_filename = "hw12/weather(146)_2001-2022.csv"
     max_temp_diffs_years = max_temp_diff(weather_filename)
-    accumulated_temperatures = cal_temperature(weather_filename)
+    accumulated_temps = cal_temps(weather_filename)
 
     # 1번 최대일교차
     for year, (max_diff, date) in max_temp_diffs_years.items():
         print(f"{year}년의 최대일교차가 발생한 날짜는 {date}이며 {max_diff:.1f}°C 입니다")
-
     
     # 2번 5월부터 9월까지의 적산온도
-    for year, temp in sorted(accumulated_temperatures.items()):
+    for year, temp in sorted(accumulated_temps.items()):
         print(f"{year}년의 5월부터 9월까지의 적산온도는 {temp:.1f}°C 입니다.")
+
+
+if __name__ == '__main__':
+    main()

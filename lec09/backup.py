@@ -69,12 +69,12 @@ def main():
    filename = "jeonju_all.csv"
    download(filename,URL)
 
-   hw_submission.submit("박성민",max_temp,max_dates,day_temps,day_dates)
+   hw_submission.submit("박성민",max_temp,max_date,day_temps,day_dates)
 
 if __name__ == "__main__":
     main()
 
-   
+
 
 
 

@@ -17,4 +17,4 @@ def submit(name: str, rain_max: float, rain_max_date: str, gap_max: float, gap_m
 
 
 if __name__ == "__main__":
-    submit("홍길동", 340.1, "2011-08-04", 25.2, "1978-01-04")
+    submit("박성민", 340.1, "2018-08-04", 25.2, "1978-01-04")

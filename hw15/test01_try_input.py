@@ -1,4 +1,4 @@
-def numbers():
+def numbers_list():
 
   numbers = []
 
@@ -24,9 +24,9 @@ def numbers():
 
 def main():
 
-  numbers_list, count, total = numbers()
+  numbers, count, total = numbers_list()
 
-  print(f"입력된 값은 {numbers_list} 입니다. 총 {count}개의 정수가 입력되었고, 평균은 {total / count:.1f}입니다.")
+  print(f"입력된 값은 {numbers} 입니다. 총 {count}개의 정수가 입력되었고, 평균은 {total / count:.1f}입니다.")
 
 
 if __name__ == "__main__":

@@ -1,3 +1,12 @@
+import tkinter as tk
+from tkinter import simpledialog
+
+window = tk.Tk()
+window.withdraw()
+
+def gui_input(text: str) -> str:
+    return simpledialog.askstring(title="Test", prompt=text)
+
 def update_shown_answer(shown_answer, hidden_answer, x):
     results = []
 
@@ -41,6 +50,7 @@ def main():
         if trial<= 0:
             print(f"정답을 맞추지 못하였습니다")
             print(f"정답은 {hidden_answer}입니다")
+            break
 
 
 if __name__ == "__main__":

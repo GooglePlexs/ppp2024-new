@@ -15,12 +15,12 @@ updater.start_polling()
 
 
 def pound_to_kg(pound):
-    kg = pound * 0.453592
+    kg = pound * 2.20462
     return kg
 
 
 def kg_to_pound(kg):
-    pound = kg * 2.20462
+    pound = kg * 0.453592
     return pound
 
 

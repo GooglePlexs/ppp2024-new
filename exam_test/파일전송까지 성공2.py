@@ -1,7 +1,7 @@
 import telegram
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, Filters
-import pandas as pd  # CSV 파일 처리를 위한 라이브러리 추가
+import pandas as pd  
 
 token = "7258921748:AAE5WbsngK62vocaeJHT4989kvNt8agcdPw"
 id = "7440605409"
@@ -20,9 +20,9 @@ def handler(update, context):
         # CSV 파일 읽기
         with open('ipo_results.csv', 'r') as csv_file:
             csv_text = csv_file.read() 
-            # 채팅 ID 가져오기
+            
             chat_id = update.message.chat_id
-            # CSV 파일 텍스트 보내기
+            
             context.bot.send_message(chat_id, text=csv_text)
     else:
         context.bot.send_message(chat_id=id, text="향후 업데이트 예정입니다.")

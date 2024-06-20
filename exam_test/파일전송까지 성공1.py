@@ -1,7 +1,7 @@
 import telegram
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, Filters
-import pandas as pd  # CSV 파일 처리를 위한 라이브러리 추가
+import pandas as pd  
 
 token = "7258921748:AAE5WbsngK62vocaeJHT4989kvNt8agcdPw"
 id = "7440605409"

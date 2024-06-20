@@ -22,6 +22,7 @@ def storage():
     url = "https://finance.naver.com/sise/ipo.nhn"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
+
     ipo_data = []
 
     for tr in soup.select("table.type_7 > tbody > tr"):
@@ -74,14 +75,11 @@ def handler(update, context):
     user_text = update.message.text
 
     if user_text == "/공모주":
-        # CSV 파일 읽기
         with open('ipo_data.csv', 'r') as csvfile:
-            # CSV 파일을 DataFrame으로 변환
             df = pd.read_csv(csvfile)
 
-            # 각 행을 메시지로 보내기
             for row in df.itertuples():
-                row_text = " ".join(row[1:])  # 각 행의 요소를 공백으로 연결
+                row_text = " ".join(row[1:]) 
                 context.bot.send_message(chat_id=id, text=row_text)
     else:
         context.bot.send_message(chat_id=id, text="향후 업데이트 예정입니다.")

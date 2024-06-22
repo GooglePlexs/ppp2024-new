@@ -1,5 +1,7 @@
 # README.md : ppp2024-new
 # 입력 키워드 : /공모주
+# 입력 데이터 : ipo_data.csv
+
 # 변수와 기능 호출
 import requests
 from bs4 import BeautifulSoup

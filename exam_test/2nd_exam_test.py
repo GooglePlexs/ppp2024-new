@@ -1,3 +1,6 @@
+# README.md : ppp2024-new
+# 입력 키워드 : /공모주
+# 변수와 기능 호출
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -6,6 +9,7 @@ from telegram.ext import Updater
 from telegram.ext import MessageHandler, Filters
 import pandas as pd
 
+#텔레그램 봇 응답체계
 token = "7258921748:AAE5WbsngK62vocaeJHT4989kvNt8agcdPw"
 id = "7440605409"
 
@@ -17,7 +21,7 @@ updater = Updater(token=token, use_context=True)
 dispatcher = updater.dispatcher
 updater.start_polling()
 
-
+# 웹에서 정보를 크롤링해 cvs형태로 저장 및 업데이트
 def storage():
     url = "https://finance.naver.com/sise/ipo.nhn"
     response = requests.get(url)
@@ -70,7 +74,7 @@ def storage():
 
 storage()
 
-
+# 텔레그램 봇 작동 키워드 기작 설정
 def handler(update, context):
     user_text = update.message.text
 
